@@ -1,0 +1,68 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+html
+  background-image: url('/libai.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+
+body, div, h1, h2, p
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif
+
+ol, ul, li
+  list-style: none
+
+.room
+  display: inline-block
+  vertical-align: top
+  width: 300px
+  height: 220px
+  margin: 20px
+  padding: 20px 30px
+  border-radius: 20px
+  color: #eee
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.6)
+
+.roomTitle
+  margin: 0 0 10px
+  font-weight: normal
+
+.roomBusy
+  background: #d05a6e
+
+.roomFree
+  background: #7ba23f
+
+.roomUnknown
+  background: #787d7b
+
+.roomHeader
+  height: 60px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.roomIcons
+  font-size: 40px
+
+.roomCalendar
+  border-top: 1px solid rgba(255, 255, 255, 0.4)
+  padding: 20px 0
+
+.calendarDesc
+  font-size: 14px
+  color: rgba(255, 255, 255, 0.6)
+
+.calendarTitle
+  margin: 5px 0
+  width: 100%
+  font-size: 22px
+  font-weight: normal
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  cursor: default

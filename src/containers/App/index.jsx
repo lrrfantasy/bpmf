@@ -6,6 +6,8 @@ import * as DashboardActions from '../../actions/dashboard'
 import Icon from '../../ui/Icon'
 import HoverInfo from '../../ui/HoverInfo'
 
+import config from '../../config'
+
 import 'font-awesome/css/font-awesome.min.css'
 import style from './style.styl'
 
@@ -31,6 +33,9 @@ const sensorMap = {
 export default class App extends Component {
   componentDidMount () {
     this.props.initStatus()
+    if (config.polling) {
+      setInterval(this.props.initStatus, 5000)
+    }
   }
 
   render () {

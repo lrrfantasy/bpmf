@@ -34,7 +34,7 @@ export default class App extends Component {
   componentDidMount () {
     this.props.initStatus()
     if (config.polling) {
-      setInterval(this.props.initStatus, 5000)
+      setInterval(this.props.initStatus, 60000)
     }
   }
 
@@ -42,7 +42,7 @@ export default class App extends Component {
     const { status } = this.props.dashboard
     const roomList = status.map((room, idx) => {
       let colorClass
-      if (room.sensor === 'U' || room.calendar.status === 'U') {
+      if (room.calendar.status === 'U') {
         colorClass = style.roomUnknown
       } else if (room.sensor === 'B' || room.calendar.status === 'B') {
         colorClass = style.roomBusy

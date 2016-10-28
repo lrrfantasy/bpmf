@@ -20,6 +20,13 @@ export default class HoverInfo extends Component {
     const textClass = classnames(style.hoverText, {
       [`${style.active}`]: this.state.isHover
     })
+    if (!this.props.text) {
+      return (
+        <div>
+          {this.props.children}
+        </div>
+      )
+    }
     return (
       <div className={style.hoverBody}
         onMouseOver={::this.handleHoverOn}

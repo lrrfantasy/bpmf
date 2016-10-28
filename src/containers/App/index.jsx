@@ -71,8 +71,20 @@ export default class App extends Component {
           </div>
           <div className={style.roomCalendar}>
             <p className={style.calendarDesc}>Calendar Detail</p>
-            <h2 className={style.calendarTitle}>{calendarTitle}</h2>
-            <p>{room.calendar.booker}</p>
+            {
+              calendarTitle && (
+                <HoverInfo text={room.calendar.title}>
+                  <h2 className={style.calendarTitle}>{calendarTitle}</h2>
+                </HoverInfo>
+              )
+            }
+            {
+              calendarTitle && (
+                <HoverInfo text={room.calendar.desc}>
+                <p>{room.calendar.booker}</p>
+                </HoverInfo>
+              )
+            }
           </div>
         </li>
       )
